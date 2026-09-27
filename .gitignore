@@ -1,0 +1,23 @@
+# 只上傳下面列出的檔案，其他（Token、金鑰、伺服器資料、知識庫、ffmpeg.exe、快取）一律不上傳
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/請先看我.txt
+!/請先看我_Mac.txt
+!/deepseek_discord_bot.py
+!/panel.pyw
+!/knowledge.py
+!/requirements.txt
+!/首次安裝.bat
+!/控制面板.bat
+!/run.bat
+!/setup.ps1
+!/setup.sh
+!/首次安裝.command
+!/控制面板.command
+!/bluefish.ico
+!/bluefish.icns
+!/bluefish.png
+!/cover.png
+!/avatar.png

@@ -1,0 +1,8 @@
+discord.py
+ollama
+requests
+opencc-python-reimplemented
+yt-dlp[default]
+PyNaCl
+pypdf
+ddgs
