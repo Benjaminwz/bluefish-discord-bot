@@ -1,8 +1,7 @@
-discord.py
+discord.py[voice]
 ollama
 requests
 opencc-python-reimplemented
 yt-dlp[default]
-PyNaCl
 pypdf
 ddgs

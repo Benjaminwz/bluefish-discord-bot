@@ -1607,7 +1607,11 @@ async def handle_music_play(message, query):
         elif vc.channel != voice_channel:
             await vc.move_to(voice_channel)
     except Exception as e:
-        await message.reply(f"進不去語音頻道啦：{e}", mention_author=False)
+        text = str(e)
+        if "davey" in text.lower() or "pynacl" in text.lower():
+            # Discord 的語音現在要加密，少了語音套件就進不去
+            text = "本魚少了語音要用的套件，請主人在控制面板按「🔄 更新元件」，再按「⟳ 重新啟動」。"
+        await message.reply(f"進不去語音頻道啦：{text}", mention_author=False)
         return
 
     await message.reply(f"幫你找「{query}」中，下載好就開始放～", mention_author=False)
