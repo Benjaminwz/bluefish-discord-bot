@@ -4,7 +4,7 @@
 
 ## 下一版（還沒發布）
 
-（目前沒有）
+- 新增介紹網頁：https://benjaminwz.github.io/bluefish-discord-bot/ ，用 Google 搜尋「藍色大肥魚」比較容易找到。
 
 ## v1.0.0（2026-09-27）
 

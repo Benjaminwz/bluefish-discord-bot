@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>藍色大肥魚｜繁體中文 Discord 機器人</title>
+<meta name="description" content="藍色大肥魚是軟萌可愛的繁體中文 Discord 機器人：AI 聊天、上網查資料、YouTube 與 B 站點歌、知識庫、伺服器管理、運動比分，附圖形控制面板，Windows 和 Mac 都能用，免費下載。">
+<meta name="keywords" content="藍色大肥魚,Discord 機器人,Discord bot,繁體中文,AI 聊天,點歌機器人,Gemini,Ollama">
+<meta property="og:title" content="藍色大肥魚｜繁體中文 Discord 機器人">
+<meta property="og:description" content="AI 聊天、點歌、知識庫、伺服器管理，附控制面板，Windows 和 Mac 都能用。">
+<meta property="og:image" content="https://benjaminwz.github.io/bluefish-discord-bot/cover.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="avatar.png">
+<style>
+  :root {
+    --navy: #1a2656; --navy-2: #25336c; --accent: #3558d4; --accent-dark: #2542ad; --sky: #8fb2ff;
+    --bg: #f4f6fc; --card: #ffffff; --text: #1f2a3d; --muted: #6b7688; --border: #dde2f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #11172e; --card: #1a2240; --text: #e8ecfa; --muted: #a3acc9; --border: #2c3764; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif; line-height: 1.7; }
+  a { color: var(--accent); }
+  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  .hero .wrap { display: flex; align-items: center; gap: 32px; padding-top: 48px; padding-bottom: 40px; }
+  .hero-text { flex: 1; min-width: 0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 56px; height: 56px; }
+  h1 { font-size: 2.4rem; margin: 0; letter-spacing: .04em; }
+  .tagline { font-size: 1.15rem; color: #c1cbee; margin: 14px 0 26px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 11px 22px; border-radius: 999px; font-weight: bold; text-decoration: none; }
+  .btn-main { background: var(--sky); color: var(--navy); }
+  .btn-main:hover { background: #b9cdff; }
+  .btn-ghost { border: 1.5px solid #8793c4; color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,.08); }
+  .cover { width: 230px; max-width: 38%; height: auto; }
+  h2 { font-size: 1.5rem; margin: 44px 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); }
+  ol.steps { padding-left: 1.3em; }
+  ol.steps li { margin-bottom: 10px; }
+  code { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; }
+  footer { color: var(--muted); font-size: .9rem; padding: 40px 0 32px; }
+  @media (max-width: 640px) {
+    .hero .wrap { flex-direction: column-reverse; text-align: center; padding-top: 32px; }
+    .brand, .buttons { justify-content: center; }
+    .cover { max-width: 55%; }
+    h1 { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="brand"><img src="avatar.png" alt="藍色大肥魚的大頭貼"><h1>藍色大肥魚</h1></div>
+      <p class="tagline">軟萌可愛的繁體中文 Discord 機器人：會聊天、會上網查資料、會點歌，還能幫你管伺服器。附圖形控制面板，Windows 和 Mac 都能用。</p>
+      <div class="buttons">
+        <a class="btn btn-main" href="https://github.com/Benjaminwz/bluefish-discord-bot/archive/refs/heads/main.zip">⬇ 免費下載</a>
+        <a class="btn btn-ghost" href="https://github.com/Benjaminwz/bluefish-discord-bot">在 GitHub 查看</a>
+        <a class="btn btn-ghost" href="https://github.com/Benjaminwz/bluefish-discord-bot/blob/main/CHANGELOG.md">版本紀錄</a>
+      </div>
+    </div>
+    <img class="cover" src="cover.png" alt="藍色大肥魚">
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>她會做什麼</h2>
+  <div class="grid">
+    <div class="card"><h3>💬 AI 聊天</h3><p>記得最近的對話，私訊不用 @ 就能聊。可以用免費線上 AI、Google Gemini、ChatGPT、Claude，或電腦上的 Ollama。</p></div>
+    <div class="card"><h3>🔎 上網查資料</h3><p>問到新聞、天氣、最新消息會自己先上網查，不用另外安裝搜尋服務。</p></div>
+    <div class="card"><h3>🎵 點歌</h3><p>YouTube、B 站都能點，有播放卡片、進度條和播放清單，也能設定專用的點歌頻道。</p></div>
+    <div class="card"><h3>📚 知識庫</h3><p>把伺服器規則、常見問題、攻略丟進資料夾，本魚回答時會自動參考，還會標出處。</p></div>
+    <div class="card"><h3>🛡️ 伺服器管理</h3><p>身分組、警告、歡迎訊息、紀錄頻道、等級、投票、抽獎、提醒、小遊戲。</p></div>
+    <div class="card"><h3>🏀 運動比分</h3><p>中職、台灣職籃、NBA、MLB、足球的比分和新聞。</p></div>
+  </div>
+
+  <h2>三步驟開始用</h2>
+  <ol class="steps">
+    <li>到 <a href="https://discord.com/developers/applications">Discord Developer Portal</a> 建立一個機器人，複製它的 Token，並打開「Message Content Intent」和「Server Members Intent」。</li>
+    <li>按上面的「免費下載」，解壓縮後雙擊 <code>首次安裝.bat</code>（Mac 是 <code>首次安裝.command</code>），照畫面回答問題、貼上 Token。</li>
+    <li>在控制面板按「▶ 啟動」，再按「邀請到伺服器」，在 Discord 打 <code>/-使用說明</code> 看新手教學。</li>
+  </ol>
+  <p>更詳細的說明在 <a href="https://github.com/Benjaminwz/bluefish-discord-bot#readme">README</a>。</p>
+</main>
+
+<footer class="wrap">藍色大肥魚 Discord 機器人 · <a href="https://github.com/Benjaminwz/bluefish-discord-bot">GitHub</a></footer>
+</body>
+</html>
