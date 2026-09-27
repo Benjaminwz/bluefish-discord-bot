@@ -3,6 +3,7 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/CHANGELOG.md
 !/請先看我.txt
 !/請先看我_Mac.txt
 !/deepseek_discord_bot.py
