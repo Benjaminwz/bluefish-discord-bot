@@ -22,3 +22,11 @@
 !/bluefish.png
 !/cover.png
 !/avatar.png
+!/setup_wizard.py
+!/installer/
+
+# 打包時產生的東西不上傳
+/installer/windows/uv/
+/installer/windows/build/
+/installer/dist/
+__pycache__/

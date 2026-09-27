@@ -6,6 +6,17 @@ AI 聊天可以用**免費線上 AI**（什麼都不用申請）、**Google Gemi
 
 還有**知識庫**：把伺服器規則、常見問題、攻略、價目表這些文件丟進「知識庫」資料夾，本魚回答時會自動找出相關段落參考，並標出資料來源。支援 txt、md、PDF、Word、Excel、PowerPoint 等格式。
 
+## 最簡單：下載安裝程式
+
+到 [Releases](https://github.com/Benjaminwz/bluefish-discord-bot/releases/latest) 下載：
+
+- **Windows**：`BlueFish-Setup-Windows-版本.exe`，雙擊後照著按「下一步」。Windows 跳出「Windows 已保護您的電腦」的話，按「其他資訊」→「仍要執行」。
+- **Mac**：`BlueFish-Mac-版本.zip`，解壓縮後把「藍色大肥魚」拖進「應用程式」，照裡面的 `安裝說明.txt` 打開。
+
+安裝程式會自動下載本魚專用的 Python（不會動到電腦裡原本的 Python），裝好後打開設定視窗，一步步選 AI、貼上 Discord Token。之後要更新，下載新版安裝程式再裝一次就好，設定和資料都會保留。
+
+下面是「整個資料夾」的用法：從 GitHub 下載原始碼，或是朋友直接把資料夾傳給你的時候。
+
 ## 第一次使用：雙擊「首次安裝.bat」
 
 新電腦什麼都不用先裝，**雙擊 `首次安裝.bat`**，照畫面回答幾個問題就好。每一步都會先問你：直接按 Enter 就是「好」，**已經熟悉、想自己處理的步驟按 n 就會跳過**（例如自己裝過 Python、已經有架好的 SearXNG）。它會：
@@ -54,6 +65,8 @@ Mac 請用 `fatfish for mac` 資料夾。程式跟 Windows 版是同一份，只
 |---|---|
 | `請先看我.txt` | 三步驟的快速上手說明，給第一次拿到這個資料夾的人看（Mac 版是 `請先看我_Mac.txt`） |
 | `CHANGELOG.md` | 版本紀錄：每一版改了什麼 |
+| `setup_wizard.py` | 安裝精靈的設定視窗（選 AI、貼 Token、下載 ffmpeg 和 Deno），安裝程式裝好後會自動打開 |
+| `installer` 資料夾 | 做 Windows 安裝程式和 Mac App 用的（`python installer/build.py v版本`），一般使用者用不到 |
 | `首次安裝.bat` | **第一次使用時雙擊這個**，之後想加裝功能也是用它 |
 | `控制面板.bat` | 打開控制面板的備用方法（找不到 Python 時會自動改跑首次安裝）。平常用開始功能表或桌面的捷徑就好 |
 | `bluefish.ico` | 本魚的圖示，捷徑和控制面板視窗都用它 |

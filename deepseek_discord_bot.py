@@ -81,6 +81,8 @@ def get_base_dir():
     return os.path.dirname(os.path.abspath(__file__))
 
 CONFIG_PATH = os.path.join(get_base_dir(), "config.json")
+if not os.path.exists(os.path.join(get_base_dir(), SETUP_NAME)):
+    SETUP_NAME = "藍色大肥魚安裝程式"  # 用安裝程式裝的沒有首次安裝，要補裝東西就再執行一次安裝程式
 
 def load_config():
     try:
@@ -262,6 +264,7 @@ def ollama_exe():
         "ollama",
         os.path.join(os.environ.get("LOCALAPPDATA", ""), "Programs", "Ollama", "ollama.exe"),
         r"C:\Program Files\Ollama\ollama.exe",
+        os.path.join(os.path.expanduser("~"), "Applications", "Ollama.app", "Contents", "Resources", "ollama"),
         "/Applications/Ollama.app/Contents/Resources/ollama",
     )
 

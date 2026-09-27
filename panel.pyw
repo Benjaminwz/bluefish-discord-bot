@@ -33,6 +33,13 @@ if not IS_WINDOWS:
     # 從 Finder 或 Dock 打開時 PATH 很短，補上 Homebrew 的位置才找得到程式（開機器人時也會傳下去）
     _path = os.environ.get("PATH", "").split(os.pathsep)
     os.environ["PATH"] = os.pathsep.join([d for d in UNIX_BIN_DIRS if d not in _path] + _path)
+    if not os.environ.get("SSL_CERT_FILE"):
+        # 安裝程式裝的 Python 不一定找得到 Mac 的憑證，用 certifi 的（開機器人時也會傳下去）
+        try:
+            import certifi
+            os.environ["SSL_CERT_FILE"] = certifi.where()
+        except ImportError:
+            pass
 
 # 工作列用這個名字認人：開始功能表的捷徑和開著的面板用同一個，釘選在工作列的肥魚圖示
 # 打開面板後才會合在同一格，不會另外多出一個 Python 圖示
@@ -63,6 +70,8 @@ def px(*values):
     return scaled[0] if len(scaled) == 1 else scaled
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if not os.path.exists(os.path.join(BASE_DIR, SETUP_NAME)):
+    SETUP_NAME = "藍色大肥魚安裝程式"  # 用安裝程式裝的沒有首次安裝，要補裝東西就再執行一次安裝程式
 BOT_SCRIPT = os.path.join(BASE_DIR, "deepseek_discord_bot.py")
 PANEL_SCRIPT = os.path.join(BASE_DIR, "panel.pyw")
 CONFIG_PATH = os.path.join(BASE_DIR, "config.json")
@@ -373,7 +382,9 @@ def find_program(name, fallback):
 
 def ollama_exe():
     if not IS_WINDOWS:
-        return find_program("ollama", "/Applications/Ollama.app/Contents/Resources/ollama")
+        # 安裝精靈把 Ollama 放在自己的「應用程式」資料夾（不用管理員密碼），自己下載的通常在 /Applications
+        user_app = os.path.join(os.path.expanduser("~"), "Applications", "Ollama.app", "Contents", "Resources", "ollama")
+        return find_program("ollama", user_app if os.path.exists(user_app) else "/Applications/Ollama.app/Contents/Resources/ollama")
     return find_program("ollama", os.path.join(os.environ.get("LOCALAPPDATA", ""), "Programs", "Ollama", "ollama.exe"))
 
 

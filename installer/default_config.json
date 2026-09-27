@@ -1,0 +1,6 @@
+{
+  "ai_enabled": false,
+  "search_enabled": false,
+  "search_engine": "builtin",
+  "ai_provider": "free"
+}
